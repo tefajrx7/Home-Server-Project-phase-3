@@ -1,0 +1,3 @@
+NAME      READY   STATUS    RESTARTS   AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+web-bad   1/1     Running   0          3m58s   10.128.0.52   sno-node   <none>           <none>
+web1      1/1     Running   0          8m27s   10.128.0.51   sno-node   <none>           <none>

@@ -1,0 +1,23 @@
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                                                                                                 SELECTOR
+deployment.apps/plex   1/1     1            1           3h39m   plex         docker.io/plexinc/pms-docker@sha256:dbb879bf58c3fc56635f21ac48c32aa6853aaa23d4a57b102033b6dc6d2d9cee   app=plex
+
+NAME           TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)     AGE     SELECTOR
+service/plex   ClusterIP   172.30.8.39   <none>        32400/TCP   3h39m   app=plex
+
+NAME                            HOST/PORT                           PATH   SERVICES   PORT   TERMINATION     WILDCARD
+route.route.openshift.io/plex   plex-media.apps.sno.lab.home.arpa          plex       http   edge/Redirect   None
+
+NAME                                STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/plex-config   Bound    pvc-46f8946a-534c-45a9-809d-1a55144f2d32   5Gi        RWO            lvms-vg1       <unset>                 3h43m   Filesystem
+persistentvolumeclaim/plex-media    Bound    pvc-c45623bc-5c21-4df2-a2ff-d9a3f0db737e   55Gi       RWO            lvms-vg1       <unset>                 160m    Filesystem
+
+NAME                                 DATA   AGE
+configmap/kube-root-ca.crt           1      3h43m
+configmap/openshift-service-ca.crt   1      3h43m
+configmap/plex-env                   2      3h39m
+
+NAME                      SECRETS   AGE
+serviceaccount/builder    0         3h43m
+serviceaccount/default    0         3h43m
+serviceaccount/deployer   0         3h43m
+serviceaccount/plex       0         3h39m

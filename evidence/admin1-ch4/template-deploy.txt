@@ -1,0 +1,44 @@
+warning: Cannot find git. Ensure that it is installed and in your path. Git is required to work with git repositories.
+--> Deploying template "course-lab/postgresql-ephemeral" to project course-lab
+
+     PostgreSQL (Ephemeral)
+     ---------
+     PostgreSQL database service, without persistent storage. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/postgresql-container/.
+     
+     WARNING: Any data stored will be lost upon pod destruction. Only use this template for testing
+
+     The following service(s) have been created in your project: postgresql.
+     
+            Username: <hidden>
+            Password: <hidden>
+       Database Name: sampledb
+      Connection URL: postgresql://postgresql:5432/
+     
+     For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/postgresql-container/.
+
+     * With parameters:
+        * Memory Limit=512Mi
+        * Namespace=openshift
+        * Database Service Name=postgresql
+        * PostgreSQL Connection Username=<hidden> # generated
+        * PostgreSQL Connection Password=<hidden> # generated
+        * PostgreSQL Database Name=sampledb
+        * Version of PostgreSQL Image=15-el9
+
+--> Creating resources ...
+    secret "postgresql" created
+    service "postgresql" created
+oc : Warning: apps.openshift.io/v1 DeploymentConfig is deprecated in v4.14+, unavailable in v4.10000+
+At line:1 char:8
++ $out = oc new-app --template=postgresql-ephemeral -p POSTGRESQL_VERSI ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: apps.o...le in v4.10000+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    deploymentconfig.apps.openshift.io "postgresql" created
+--> Success
+    Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+     'oc expose service/postgresql' 
+    Run 'oc status' to view your app.
+
+

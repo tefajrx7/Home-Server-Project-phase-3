@@ -1,0 +1,3 @@
+NAME                   READY   STATUS    RESTARTS   AGE   IP             NODE       NOMINATED NODE   READINESS GATES
+web-8566b9b77d-7f89p   1/1     Running   0          46s   10.128.0.102   sno-node   <none>           <none>
+web-8566b9b77d-qlltp   1/1     Running   0          58s   10.128.0.101   sno-node   <none>           <none>

@@ -1,0 +1,15 @@
+Name:			httpd-imp
+Namespace:		course-lab
+Created:		28 minutes ago
+Labels:			<none>
+Annotations:		openshift.io/image.dockerRepositoryCheck=2026-10-19T22:32:01Z
+Image Repository:	<none>
+Image Lookup:		local=false
+Unique Images:		1
+Tags:			1
+
+v1
+  tagged from registry.access.redhat.com/ubi9/httpd-24:latest
+
+  * registry.access.redhat.com/ubi9/httpd-24@sha256:3f5d378cf547d85147c2acfb9849dd7b6ec823e5506caca978e587bada6e34b3
+      About a minute ago

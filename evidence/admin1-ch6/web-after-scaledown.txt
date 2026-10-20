@@ -1,0 +1,6 @@
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/web   2/2     2            2           90m
+
+NAME                       READY   STATUS    RESTARTS   AGE
+pod/web-86c68dcb79-46php   1/1     Running   0          21m
+pod/web-86c68dcb79-wnkrq   1/1     Running   0          22m

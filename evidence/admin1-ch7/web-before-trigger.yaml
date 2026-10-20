@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "8"
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"httpd:v1"},"fieldPath":"spec.template.spec.containers[?(@.name==\"httpd-24\")].image"}]'
+  creationTimestamp: "2026-10-19T21:31:39Z"
+  generation: 13
+  labels:
+    app: web
+  name: web
+  namespace: course-lab
+  resourceVersion: "118724"
+  uid: 365c0578-fed7-418d-a806-543bafceafb4
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 2
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: web
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: web
+    spec:
+      containers:
+      - env:
+        - name: APP_TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: APP_TOKEN
+              name: web-secret
+        image: registry.access.redhat.com/ubi9/httpd-24:latest
+        imagePullPolicy: Always
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: httpd-24
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 3
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 200m
+            memory: 128Mi
+          requests:
+            cpu: 20m
+            memory: 32Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/www/html
+          name: index
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: web-index
+        name: index
+status:
+  availableReplicas: 2
+  conditions:
+  - lastTransitionTime: "2026-10-19T21:31:42Z"
+    lastUpdateTime: "2026-10-19T21:52:43Z"
+    message: ReplicaSet "web-6d4bd9b4d8" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2026-10-19T21:55:03Z"
+    lastUpdateTime: "2026-10-19T21:55:03Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 13
+  readyReplicas: 2
+  replicas: 2
+  updatedReplicas: 2

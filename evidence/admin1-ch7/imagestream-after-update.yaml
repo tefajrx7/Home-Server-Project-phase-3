@@ -1,0 +1,38 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/image.dockerRepositoryCheck: "2026-10-19T22:39:51Z"
+  creationTimestamp: "2026-10-19T22:04:44Z"
+  generation: 4
+  name: httpd-imp
+  namespace: course-lab
+  resourceVersion: "122808"
+  uid: 46244262-6d4d-444a-bab2-8bacd3bc7615
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/httpd-24:latest
+    generation: 4
+    importPolicy:
+      importMode: Legacy
+    name: v1
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2026-10-19T22:39:51Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/httpd-24@sha256:f155a200ca06feb7bc88c38fea02e640f8c2852e7716dbc45ab865e5ececa10f
+      generation: 4
+      image: sha256:f155a200ca06feb7bc88c38fea02e640f8c2852e7716dbc45ab865e5ececa10f
+    - created: "2026-10-19T22:32:01Z"
+      dockerImageReference: registry.access.redhat.com/ubi9/httpd-24@sha256:3f5d378cf547d85147c2acfb9849dd7b6ec823e5506caca978e587bada6e34b3
+      generation: 2
+      image: sha256:3f5d378cf547d85147c2acfb9849dd7b6ec823e5506caca978e587bada6e34b3
+    tag: v1

@@ -1,0 +1,12 @@
+=== BEFORE ===
+NAME                   READY   STATUS    RESTARTS   AGE
+web-86c68dcb79-46php   1/1     Running   0          26m
+web-86c68dcb79-wnkrq   1/1     Running   0          26m
+Deleting: pod/web-86c68dcb79-46php
+=== AFTER (immediately) ===
+NAME                   READY   STATUS              RESTARTS   AGE
+web-86c68dcb79-wnkrq   1/1     Running             0          27m
+web-86c68dcb79-wrv9m   0/1     ContainerCreating   0          1s
+NAME                   READY   STATUS    RESTARTS   AGE
+web-86c68dcb79-wnkrq   1/1     Running   0          27m
+web-86c68dcb79-wrv9m   1/1     Running   0          14s

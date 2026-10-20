@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+date: Mon, 19 Oct 2026 23:02:02 GMT
+server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+last-modified: Mon, 19 Oct 2026 22:40:42 GMT
+etag: "57-65e39343a94cb"
+accept-ranges: bytes
+content-length: 87
+content-type: text/html; charset=UTF-8
+set-cookie: 6ec3983efa10d18f53e13346b3559157=98972db882d0b59959ff5b2c453a8ea9; path=/; HttpOnly; Secure; SameSite=None
+cache-control: private
+
+<html><body><h1>OpenShift course lab</h1><p>Served from a ConfigMap</p></body></html>

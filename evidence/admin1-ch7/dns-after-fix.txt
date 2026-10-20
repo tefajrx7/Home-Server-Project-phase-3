@@ -1,0 +1,157 @@
+
+Name                           Type   TTL   Section    NameHost                                                          
+----                           ----   ---   -------    --------                                                          
+cdn01.quay.io                  CNAME  40    Answer     cdn01.quay.io.edgesuite.net                                       
+cdn01.quay.io.edgesuite.net    CNAME  40    Answer     a1663.dscd.akamai.net                                             
+
+Name       : a1663.dscd.akamai.net
+QueryType  : AAAA
+TTL        : 20
+Section    : Answer
+IP6Address : 2001:41a8:47:301::5f65:2318
+
+
+Name       : a1663.dscd.akamai.net
+QueryType  : AAAA
+TTL        : 20
+Section    : Answer
+IP6Address : 2001:41a8:47:301::5f65:2330
+
+
+Name       : a1663.dscd.akamai.net
+QueryType  : A
+TTL        : 20
+Section    : Answer
+IP4Address : 95.100.133.206
+
+
+Name       : a1663.dscd.akamai.net
+QueryType  : A
+TTL        : 20
+Section    : Answer
+IP4Address : 95.100.133.137
+
+
+
+
+Name                           Type   TTL   Section    NameHost                                                          
+----                           ----   ---   -------    --------                                                          
+registry.redhat.io             CNAME  3     Answer     registry-proxy-134442355.us-east-1.elb.amazonaws.com              
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : AAAA
+TTL        : 10
+Section    : Answer
+IP6Address : 2600:1f18:d77:9001:1212:ee25:236f:4a39
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : AAAA
+TTL        : 10
+Section    : Answer
+IP6Address : 2600:1f18:d77:9000:60c7:d5f7:d9d3:6ef1
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : AAAA
+TTL        : 10
+Section    : Answer
+IP6Address : 2600:1f18:d77:9001:9b1a:3e4c:b7bd:b414
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : AAAA
+TTL        : 10
+Section    : Answer
+IP6Address : 2600:1f18:d77:9002:3ce1:33b6:7416:30ae
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : AAAA
+TTL        : 10
+Section    : Answer
+IP6Address : 2600:1f18:d77:9000:352a:fc98:772c:f3ab
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : AAAA
+TTL        : 10
+Section    : Answer
+IP6Address : 2600:1f18:d77:9002:b97:4eb0:7df7:6f4c
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : A
+TTL        : 10
+Section    : Answer
+IP4Address : 184.73.221.85
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : A
+TTL        : 10
+Section    : Answer
+IP4Address : 54.235.96.49
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : A
+TTL        : 10
+Section    : Answer
+IP4Address : 34.237.11.25
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : A
+TTL        : 10
+Section    : Answer
+IP4Address : 32.199.33.133
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : A
+TTL        : 10
+Section    : Answer
+IP4Address : 54.160.108.93
+
+
+Name       : registry-proxy-134442355.us-east-1.elb.amazonaws.com
+QueryType  : A
+TTL        : 10
+Section    : Answer
+IP4Address : 3.222.161.2
+
+
+
+
+Name                           Type   TTL   Section    NameHost                                                          
+----                           ----   ---   -------    --------                                                          
+infogw.api.openshift.com       CNAME  16    Answer     elb.apps.telemeter-prod.a5j2.p1.openshiftapps.com                 
+
+Name       : elb.apps.telemeter-prod.a5j2.p1.openshiftapps.com
+QueryType  : A
+TTL        : 60
+Section    : Answer
+IP4Address : 35.168.42.30
+
+
+Name       : elb.apps.telemeter-prod.a5j2.p1.openshiftapps.com
+QueryType  : A
+TTL        : 60
+Section    : Answer
+IP4Address : 184.193.162.198
+
+
+Name                   : a5j2.p1.openshiftapps.com
+QueryType              : SOA
+TTL                    : 770
+Section                : Authority
+NameAdministrator      : awsdns-hostmaster.amazon.com
+SerialNumber           : 1
+TimeToZoneRefresh      : 7200
+TimeToZoneFailureRetry : 900
+TimeToExpiration       : 1209600
+DefaultTTL             : 86400
+
+
+

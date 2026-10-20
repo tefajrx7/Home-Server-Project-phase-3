@@ -1,0 +1,2 @@
+NAME   READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                                                                                             SELECTOR
+web    2/2     2            2           70m   httpd-24     registry.access.redhat.com/ubi8/httpd-24@sha256:f155a200ca06feb7bc88c38fea02e640f8c2852e7716dbc45ab865e5ececa10f   app=web

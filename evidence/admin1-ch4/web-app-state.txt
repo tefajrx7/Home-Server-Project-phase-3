@@ -1,0 +1,15 @@
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                                            SELECTOR
+deployment.apps/web   2/2     2            2           3m46s   httpd-24     registry.access.redhat.com/ubi9/httpd-24:latest   app=web
+
+NAME                       READY   STATUS    RESTARTS   AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+pod/web-594cf9b5b5-prwxn   1/1     Running   0          3m43s   10.128.0.65   sno-node   <none>           <none>
+pod/web-594cf9b5b5-x886j   1/1     Running   0          3m43s   10.128.0.66   sno-node   <none>           <none>
+
+NAME          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE     SELECTOR
+service/web   ClusterIP   172.30.176.218   <none>        8080/TCP   2m20s   app=web
+
+NAME                           HOST/PORT                               PATH   SERVICES   PORT    TERMINATION   WILDCARD
+route.route.openshift.io/web   web-course-lab.apps.sno.lab.home.arpa          web        <all>   edge          None
+
+NAME            ENDPOINTS                           AGE
+endpoints/web   10.128.0.65:8080,10.128.0.66:8080   2m20s

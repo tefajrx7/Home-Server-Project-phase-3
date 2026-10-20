@@ -1,0 +1,3 @@
+NAME             TYPE    VALUE                    AUTO
+deployments/web  config                           true
+deployments/web  image   httpd-imp:v1 (httpd-24)  true

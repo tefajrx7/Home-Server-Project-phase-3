@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plex
+  namespace: media
+  labels:
+    app: plex
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: plex
+  template:
+    metadata:
+      labels:
+        app: plex
+    spec:
+      serviceAccountName: plex
+      containers:
+      - name: plex
+        image: docker.io/plexinc/pms-docker@sha256:dbb879bf58c3fc56635f21ac48c32aa6853aaa23d4a57b102033b6dc6d2d9cee
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 32400
+        envFrom:
+        - configMapRef:
+            name: plex-env
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256Mi
+          limits:
+            cpu: "2"
+            memory: 1Gi
+        securityContext:
+          runAsUser: 0
+        readinessProbe:
+          tcpSocket:
+            port: 32400
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: 32400
+          initialDelaySeconds: 120
+          periodSeconds: 20
+          failureThreshold: 6
+        volumeMounts:
+        - name: config
+          mountPath: /config
+        - name: transcode
+          mountPath: /transcode
+        - name: media
+          mountPath: /media
+          readOnly: true
+      volumes:
+      - name: config
+        persistentVolumeClaim:
+          claimName: plex-config
+      - name: media
+        persistentVolumeClaim:
+          claimName: plex-media
+      - name: transcode
+        emptyDir:
+          sizeLimit: 5Gi

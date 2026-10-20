@@ -1,0 +1,18 @@
+=== BEFORE delete ===
+Mon Oct 19 23:04:14 UTC 2026
+total 8
+drwxrwsrwx. 2 root       1000760000 55 Oct 19 23:04 .
+dr-xr-xr-x. 1 root       root       40 Oct 19 21:47 ..
+-rw-rw-r--. 1 1000760000 1000760000  0 Oct 19 21:47 id.txt
+-rw-rw-r--. 1 1000760000 1000760000 11 Oct 19 21:46 proof.txt
+-rw-r--r--. 1 1000760000 1000760000 29 Oct 19 23:04 proof2.txt
+9c5e2601-0fb0-4290-b464-6a9d1e6a9abe
+=== AFTER recreate ===
+4cee0048-59c5-40d6-899b-42c04204c0b7
+Mon Oct 19 23:04:14 UTC 2026
+total 8
+drwxrwsrwx. 2 root       1000760000 55 Oct 19 23:04 .
+dr-xr-xr-x. 1 root       root       40 Oct 19 23:04 ..
+-rw-rw-r--. 1 1000760000 1000760000  0 Oct 19 23:04 id.txt
+-rw-rw-r--. 1 1000760000 1000760000 11 Oct 19 21:46 proof.txt
+-rw-rw-r--. 1 1000760000 1000760000 29 Oct 19 23:04 proof2.txt

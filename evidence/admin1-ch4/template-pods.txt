@@ -1,0 +1,8 @@
+NAME                   READY   STATUS      RESTARTS   AGE
+db-0                   1/1     Running     0          11m
+db-1                   1/1     Running     0          90m
+hello-ztpxg            0/1     Completed   0          100m
+postgresql-1-cczh9     1/1     Running     0          2m26s
+postgresql-1-deploy    0/1     Completed   0          2m30s
+web-86c68dcb79-wnkrq   1/1     Running     0          36m
+web-86c68dcb79-wrv9m   1/1     Running     0          9m20s

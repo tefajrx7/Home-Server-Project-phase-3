@@ -1,0 +1,13 @@
+NAME                  READY   AGE     CONTAINERS   IMAGES
+statefulset.apps/db   2/2     3m24s   main         registry.access.redhat.com/ubi9/ubi-minimal
+
+NAME                       READY   STATUS      RESTARTS   AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+pod/db-0                   1/1     Running     0          108s    10.128.0.87   sno-node   <none>           <none>
+pod/db-1                   1/1     Running     0          3m16s   10.128.0.86   sno-node   <none>           <none>
+pod/hello-ztpxg            0/1     Completed   0          13m     10.128.0.69   sno-node   <none>           <none>
+pod/web-5c5dc48b9d-jbxbx   1/1     Running     0          5m8s    10.128.0.83   sno-node   <none>           <none>
+pod/web-5c5dc48b9d-xp6s5   1/1     Running     0          5m13s   10.128.0.82   sno-node   <none>           <none>
+
+NAME                              STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/data-db-0   Bound    pvc-6ec55b7e-6a19-4498-85bf-9074ddd72437   1Gi        RWO            lvms-vg1       <unset>                 3m24s   Filesystem
+persistentvolumeclaim/data-db-1   Bound    pvc-11f805ad-1a3e-465d-88bf-81b8a641f98e   1Gi        RWO            lvms-vg1       <unset>                 3m16s   Filesystem

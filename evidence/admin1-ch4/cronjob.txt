@@ -1,0 +1,18 @@
+NAME                       SCHEDULE      TIMEZONE   SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+cronjob.batch/hello-cron   */1 * * * *   <none>     False     0        27s             2m10s
+
+NAME                            STATUS     COMPLETIONS   DURATION   AGE
+job.batch/hello                 Complete   1/1           7s         95m
+job.batch/hello-cron-29874190   Complete   1/1           6s         87s
+job.batch/hello-cron-29874191   Complete   1/1           7s         27s
+
+NAME                            READY   STATUS      RESTARTS   AGE
+pod/db-0                        1/1     Running     0          6m39s
+pod/db-1                        1/1     Running     0          85m
+pod/hello-cron-29874190-cx2pb   0/1     Completed   0          87s
+pod/hello-cron-29874191-kx488   0/1     Completed   0          27s
+pod/hello-ztpxg                 0/1     Completed   0          95m
+pod/web-86c68dcb79-wnkrq        1/1     Running     0          31m
+pod/web-86c68dcb79-wrv9m        1/1     Running     0          4m37s
+--- logs of job.batch/hello-cron-29874191 ---
+Mon Oct 19 23:11:04 UTC 2026

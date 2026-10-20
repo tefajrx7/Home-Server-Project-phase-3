@@ -1,0 +1,17 @@
+LAST SEEN   TYPE      REASON           OBJECT        MESSAGE
+8m31s       Normal    Scheduled        pod/web1      Successfully assigned course-lab/web1 to sno-node
+8m29s       Normal    Pulling          pod/web1      Pulling image "registry.access.redhat.com/ubi9/httpd-24"
+8m29s       Normal    AddedInterface   pod/web1      Add eth0 [10.128.0.51/23] from ovn-kubernetes
+8m16s       Normal    Started          pod/web1      Started container web1
+8m16s       Normal    Created          pod/web1      Created container: web1
+8m16s       Normal    Pulled           pod/web1      Successfully pulled image "registry.access.redhat.com/ubi9/httpd-24" in 13.791s (13.791s including waiting). Image size: 309774138 bytes.
+4m2s        Normal    AddedInterface   pod/web-bad   Add eth0 [10.128.0.52/23] from ovn-kubernetes
+4m2s        Normal    Scheduled        pod/web-bad   Successfully assigned course-lab/web-bad to sno-node
+2m24s       Normal    Pulling          pod/web-bad   Pulling image "registry.access.redhat.com/ubi9/httpd-24:no-such-tag"
+2m22s       Warning   Failed           pod/web-bad   Error: ErrImagePull
+2m22s       Warning   Failed           pod/web-bad   Failed to pull image "registry.access.redhat.com/ubi9/httpd-24:no-such-tag": unable to pull image or OCI artifact: pull image err: initializing source docker://registry.access.redhat.com/ubi9/httpd-24:no-such-tag: reading manifest no-such-tag in registry.access.redhat.com/ubi9/httpd-24: manifest unknown; artifact err: get manifest: build image source: reading manifest no-such-tag in registry.access.redhat.com/ubi9/httpd-24: manifest unknown
+2m11s       Warning   Failed           pod/web-bad   Error: ImagePullBackOff
+2m11s       Normal    BackOff          pod/web-bad   Back-off pulling image "registry.access.redhat.com/ubi9/httpd-24:no-such-tag"
+2m4s        Normal    Started          pod/web-bad   Started container web-bad
+2m4s        Normal    Created          pod/web-bad   Created container: web-bad
+2m4s        Normal    Pulled           pod/web-bad   Container image "registry.access.redhat.com/ubi9/httpd-24:latest" already present on machine
